@@ -1,4 +1,4 @@
-# Write a program to convert a string to an integer and handle a ValueError if the string
+    # Write a program to convert a string to an integer and handle a ValueError if the string
 # is not a valid number. Display a user-friendly error message and prompt the user to
 # enter a valid number.
 
