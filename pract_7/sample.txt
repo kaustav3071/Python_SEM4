@@ -1,0 +1,3 @@
+Hello, this is a test file.
+This file contains sample text.
+Python file handling is easy!
