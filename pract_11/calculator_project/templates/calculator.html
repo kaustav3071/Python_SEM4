@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input, button {
+            margin: 5px;
+            padding: 5px;
+        }
+        .result {
+            margin-top: 10px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Basic Calculator</h2>
+        <form method="post">
+            {% csrf_token %}
+            <input type="number" name="num1" placeholder="Enter first number" step="any" required><br>
+            <input type="number" name="num2" placeholder="Enter second number" step="any" required><br>
+
+            <button type="submit" name="operation" value="add">+</button>
+            <button type="submit" name="operation" value="subtract">-</button>
+            <button type="submit" name="operation" value="multiply">×</button>
+            <button type="submit" name="operation" value="divide">÷</button>
+        </form>
+
+        {% if result %}
+            <div class="result">
+                Result: {{ result }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
